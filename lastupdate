@@ -1,0 +1,5 @@
+#!/bin/sh
+last=$(stat -c %Y /var/cache/apt/pkgcache.bin)
+now=$(date +%s)
+diff=$(($now - $last))
+echo $diff
