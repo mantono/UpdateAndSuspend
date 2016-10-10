@@ -1,10 +1,5 @@
 #!/bin/sh
 sudo -A echo "Root permission granted" &&
-gnome-screensaver-command --lock
-if [ $(lastupdate) -gt 86400 ] # One day
-then
-	sudo apt update
-fi
-sudo apt -yu upgrade &&
-sudo apt -y autoremove
+gnome-screensaver-command --lock &&
+update
 sudo pm-suspend

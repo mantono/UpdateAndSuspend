@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ $(lastupdate) -gt 86400 ] # One day
+then
+	sudo apt update
+fi
+sudo apt -yu upgrade &&
+sudo apt -y autoremove
